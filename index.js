@@ -9,6 +9,8 @@ let taxRate = 5;
 let discountPercetage = 10;
 let loyaltyRate = 2;
 
+app.use(cors())
+
 app.get('/cart-total', (req, res) => {
   let newItemPrice = parseFloat(req.query.newItemPrice);
   let cartTotal = parseFloat(req.query.cartTotal);
